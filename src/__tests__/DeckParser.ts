@@ -11,6 +11,7 @@ describe('DeckParser', () => {
     expect(DeckParser.parse('* 1 Tapu Koko PR-SM 30')).toEqual({
       cards: [
         {
+          raw: '* 1 Tapu Koko PR-SM 30',
           amount: 1,
           code: 30,
           name: 'Tapu Koko',
@@ -27,6 +28,7 @@ describe('DeckParser', () => {
     expect(DeckParser.parse('* 1 Oranguru SUM 113')).toEqual({
       cards: [
         {
+          raw: '* 1 Oranguru SUM 113',
           amount: 1,
           code: 113,
           name: 'Oranguru',
@@ -40,28 +42,31 @@ describe('DeckParser', () => {
   });
 
   it('Should Work #3', () => {
-    expect(DeckParser.parse('* 2 Mew FAC 29')).toEqual({
+    expect(DeckParser.parse('* 2 Mew FCO 29')).toEqual({
       cards: [
         {
+          raw: '* 2 Mew FCO 29',
           amount: 2,
           code: 29,
           name: 'Mew',
           ptcgoio: {
             id: 'xy10-29',
           },
-          set: 'FAC',
+          set: 'FCO',
         },
       ],
     });
   });
 
   it('Should Work #4', () => {
-    expect(DeckParser.parse('* 11 Darkness Energy 7')).toEqual({
+    const entry = '* 10 Darkness Energy Energy 7';
+    expect(DeckParser.parse(entry)).toEqual({
       cards: [
         {
-          amount: 11,
+          raw: entry,
+          amount: 10,
           code: 7,
-          name: 'Darkness',
+          name: 'Darkness Energy',
           ptcgoio: {
             id: 'sm1-170',
           },
@@ -72,12 +77,14 @@ describe('DeckParser', () => {
   });
 
   it('Should Work #5', () => {
-    expect(DeckParser.parse('* 10 Lightning Energy 1')).toEqual({
+    const entry = '* 1 Lightning Energy Energy 4';
+    expect(DeckParser.parse(entry)).toEqual({
       cards: [
         {
-          amount: 10,
-          code: 1,
-          name: 'Lightning',
+          raw: entry,
+          amount: 1,
+          code: 4,
+          name: 'Lightning Energy',
           ptcgoio: {
             id: 'sm1-167',
           },
@@ -91,6 +98,7 @@ describe('DeckParser', () => {
     expect(DeckParser.parse('* 4 Double Dragon Energy ROS 97')).toEqual({
       cards: [
         {
+          raw: '* 4 Double Dragon Energy ROS 97',
           amount: 4,
           code: 97,
           name: 'Double Dragon Energy',

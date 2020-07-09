@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeckParser Should Work with an exported deck 1`] = `
+Object {
+  "cards": Array [
+    Object {
+      "amount": 1,
+      "code": 113,
+      "name": "Oranguru",
+      "ptcgoio": Object {
+        "id": "sm1-113",
+      },
+      "raw": "* 1 Oranguru SUM 113",
+      "set": "SUM",
+    },
+    Object {
+      "amount": 3,
+      "code": 74,
+      "name": "Darkrai-EX",
+      "ptcgoio": Object {
+        "id": "xy9-74",
+      },
+      "raw": "* 3 Darkrai-EX BKP 74",
+      "set": "BKP",
+    },
+    Object {
+      "amount": 4,
+      "code": 94,
+      "name": "Dratini",
+      "ptcgoio": Object {
+        "id": "sm1-94",
+      },
+      "raw": "* 4 Dratini SUM 94",
+      "set": "SUM",
+    },
+    Object {
+      "amount": 3,
+      "code": 95,
+      "name": "Dragonair",
+      "ptcgoio": Object {
+        "id": "sm1-95",
+      },
+      "raw": "* 3 Dragonair SUM 95",
+      "set": "SUM",
+    },
+    Object {
+      "amount": 1,
+      "code": 51,
+      "name": "Dragonite",
+      "ptcgoio": Object {
+        "id": "xy6-51",
+      },
+      "raw": "* 1 Dragonite ROS 51",
+      "set": "ROS",
+    },
+    Object {
+      "amount": 1,
+      "code": 29,
+      "name": "Mew",
+      "ptcgoio": Object {
+        "id": "xy10-29",
+      },
+      "raw": "* 1 Mew FCO 29",
+      "set": "FCO",
+    },
+    Object {
+      "amount": 1,
+      "code": 99,
+      "name": "Fighting Fury Belt",
+      "ptcgoio": Object {
+        "id": "xy9-99",
+      },
+      "raw": "* 1 Fighting Fury Belt BKP 99",
+      "set": "BKP",
+    },
+    Object {
+      "amount": 2,
+      "code": 69,
+      "name": "Ace Trainer",
+      "ptcgoio": Object {
+        "id": "xy7-69",
+      },
+      "raw": "* 2 Ace Trainer AOR 69",
+      "set": "AOR",
+    },
+    Object {
+      "amount": 4,
+      "code": 92,
+      "name": "Trainers' Mail",
+      "ptcgoio": Object {
+        "id": "xy6-92",
+      },
+      "raw": "* 4 Trainers' Mail ROS 92",
+      "set": "ROS",
+    },
+    Object {
+      "amount": 2,
+      "code": 122,
+      "name": "Lillie",
+      "ptcgoio": Object {
+        "id": "sm1-122",
+      },
+      "raw": "* 2 Lillie SUM 122",
+      "set": "SUM",
+    },
+    Object {
+      "amount": 3,
+      "code": 146,
+      "name": "Professor's Letter",
+      "ptcgoio": Object {
+        "id": "xy8-146",
+      },
+      "raw": "* 3 Professor's Letter BKT 146",
+      "set": "BKT",
+    },
+    Object {
+      "amount": 1,
+      "code": 149,
+      "name": "Super Rod",
+      "ptcgoio": Object {
+        "id": "xy8-149",
+      },
+      "raw": "* 1 Super Rod BKT 149",
+      "set": "BKT",
+    },
+    Object {
+      "amount": 2,
+      "code": 78,
+      "name": "Lysandre",
+      "ptcgoio": Object {
+        "id": "xy7-78",
+      },
+      "raw": "* 2 Lysandre AOR 78",
+      "set": "AOR",
+    },
+    Object {
+      "amount": 3,
+      "code": 107,
+      "name": "Professor Sycamore",
+      "ptcgoio": Object {
+        "id": "xy9-107",
+      },
+      "raw": "* 3 Professor Sycamore BKP 107",
+      "set": "BKP",
+    },
+    Object {
+      "amount": 1,
+      "code": 77,
+      "name": "Lucky Helmet",
+      "ptcgoio": Object {
+        "id": "xy7-77",
+      },
+      "raw": "* 1 Lucky Helmet AOR 77",
+      "set": "AOR",
+    },
+    Object {
+      "amount": 1,
+      "code": 38,
+      "name": "Switch",
+      "ptcgoio": Object {
+        "id": "xy0-38",
+      },
+      "raw": "* 1 Switch KSS 38",
+      "set": "KSS",
+    },
+    Object {
+      "amount": 1,
+      "code": 136,
+      "name": "Fisherman",
+      "ptcgoio": Object {
+        "id": "xy8-136",
+      },
+      "raw": "* 1 Fisherman BKT 136",
+      "set": "BKT",
+    },
+    Object {
+      "amount": 1,
+      "code": 127,
+      "name": "Escape Rope",
+      "ptcgoio": Object {
+        "id": "xy5-127",
+      },
+      "raw": "* 1 Escape Rope PRC 127",
+      "set": "PRC",
+    },
+    Object {
+      "amount": 1,
+      "code": 105,
+      "name": "Special Charge",
+      "ptcgoio": Object {
+        "id": "xy11-105",
+      },
+      "raw": "* 1 Special Charge STS 105",
+      "set": "STS",
+    },
+    Object {
+      "amount": 1,
+      "code": 109,
+      "name": "VS Seeker",
+      "ptcgoio": Object {
+        "id": "xy4-109",
+      },
+      "raw": "* 1 VS Seeker PHF 109",
+      "set": "PHF",
+    },
+    Object {
+      "amount": 3,
+      "code": 113,
+      "name": "Ultra Ball",
+      "ptcgoio": Object {
+        "id": "xy10-113",
+      },
+      "raw": "* 3 Ultra Ball FCO 113",
+      "set": "FCO",
+    },
+    Object {
+      "amount": 2,
+      "code": 137,
+      "name": "Float Stone",
+      "ptcgoio": Object {
+        "id": "xy8-137",
+      },
+      "raw": "* 2 Float Stone BKT 137",
+      "set": "BKT",
+    },
+    Object {
+      "amount": 2,
+      "code": 76,
+      "name": "Level Ball",
+      "ptcgoio": Object {
+        "id": "xy7-76",
+      },
+      "raw": "* 2 Level Ball AOR 76",
+      "set": "AOR",
+    },
+    Object {
+      "amount": 1,
+      "code": 183,
+      "name": "Rainbow Energy",
+      "ptcgoio": Object {
+        "id": "sm7-183",
+      },
+      "raw": "* 1 Rainbow Energy CES 183",
+      "set": "CES",
+    },
+    Object {
+      "amount": 4,
+      "code": 97,
+      "name": "Double Dragon Energy",
+      "ptcgoio": Object {
+        "id": "xy6-97",
+      },
+      "raw": "* 4 Double Dragon Energy ROS 97",
+      "set": "ROS",
+    },
+    Object {
+      "amount": 10,
+      "code": 7,
+      "name": "Darkness Energy",
+      "ptcgoio": Object {
+        "id": "sm1-170",
+      },
+      "raw": "* 10 Darkness Energy Energy 7",
+      "set": "Energy",
+    },
+    Object {
+      "amount": 1,
+      "code": 3,
+      "name": "Water Energy",
+      "ptcgoio": Object {
+        "id": "sm1-166",
+      },
+      "raw": "* 1 Water Energy Energy 3",
+      "set": "Energy",
+    },
+    Object {
+      "amount": 18,
+      "code": 8,
+      "name": "Psychic Energy",
+      "ptcgoio": Object {
+        "id": "undefined-8",
+      },
+      "raw": "* 18 Psychic Energy XYEnergy 8",
+      "set": "XYEnergy",
+    },
+  ],
+}
+`;

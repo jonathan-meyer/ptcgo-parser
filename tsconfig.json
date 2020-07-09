@@ -1,0 +1,21 @@
+{
+  "include": ["src"],
+  "exclude": ["**/__tests__"],
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["ES2019"],
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "declaration": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true
+  }
+}

@@ -1,47 +1,80 @@
+import { PokemonTCG } from 'pokemon-tcg-sdk-typescript';
 import Deck from './Deck';
-import { BASIC_ENERGY_IDS, SET_CODES } from './types';
 
 const CARD_PATTERN = /^(?:\* )?(\d+) (.*) (\w+|[A-Z]{2}-[A-Z]{2})? (\d+|XY\d+|BW\d+)$/;
 
-const SET_PATTERN = /(?:\* )?(\d+) (.*) ([A-Z]{2,3}|[A-Z]{2}-[A-Z]{2}|[A-Z0-9]{3})? (\d+|XY\d+|BW\d+)*/;
-const BASIC_ENERGY_PATTERN = /(?:\* )?(\d+) (Darkness|Fairy|Fighting|Fire|Grass|Lightning|Metal|Psychic|Water) Energy.*/;
+const getCard = async (code: string) => {
+  return PokemonTCG.Card.find(code).catch((err) => {
+    const card = new PokemonTCG.Card();
+    card.name = `unknown code: '${code}'`;
+    card.id = '???-??';
+    card.number = '??';
+    return card;
+  });
+};
 
-const parseRow = (row: string) => {
-  const [, amount, name, set, code] = row.match(CARD_PATTERN) || [];
-  return { amount, name, set, code };
+const getSet = async (code: string) => {
+  return PokemonTCG.Set.where([{ name: 'ptcgoCode', value: code || '' }])
+    .then((sets) => sets[0] || new PokemonTCG.Set())
+    .catch((err) => {
+      const set = new PokemonTCG.Set();
+      set.ptcgoCode = `unknown code: '${code}'`;
+      set.code = '???';
+      return set;
+    });
+};
+
+const parseRow = async (row: string) => {
+  const [, amount, name, setCode, number] = row.match(CARD_PATTERN) || [];
+
+  let card: PokemonTCG.Card;
+  let set: PokemonTCG.Set;
+
+  if (/Energy/i.test(setCode)) {
+    card = (
+      await PokemonTCG.Card.where([
+        { name: 'supertype', value: 'Energy' },
+        { name: 'subtype', value: 'Basic' },
+        { name: 'name', value: name },
+      ])
+    )[0];
+    set = await PokemonTCG.Set.find(card.setCode);
+  } else {
+    set = await getSet(setCode);
+    const [, promoSet] =
+      (set.ptcgoCode && set.ptcgoCode.match(/^PR-(\w+)$/)) || [];
+    card = await getCard(`${set.code}-${promoSet || ''}${number}`);
+  }
+
+  return { amount: Number(amount), card, set };
 };
 
 class DeckParser {
-  static parse(decklist: string): Deck {
+  static async parse(decklist: string): Promise<Deck> {
     return {
-      cards: decklist
-        .split('\n')
-        .map((row) => row.trim())
-        .filter((row) => row.length > 0)
-        .map((row) => {
-          const { amount, name, set, code } = parseRow(row);
+      cards: await Promise.all(
+        decklist
+          .split('\n')
+          .map((row) => row.trim())
+          .filter((row) => row.length > 0 && CARD_PATTERN.test(row))
+          .map(async (row) => {
+            const { amount, card, set } = await parseRow(row);
 
-          const promoSet =
-            set && set.startsWith('PR') ? set.split('-')[1] : null;
-
-          return name
-            ? {
+            return (
+              card && {
                 raw: row,
-                amount: Number(amount),
-                name,
-                set,
-                code: Number(code),
+                amount,
+                name: card.name,
+                set: set.ptcgoCode,
+                code: Number(card.number) || card.number,
                 ptcgoio: {
-                  id: promoSet
-                    ? `${SET_CODES[set]}-${promoSet}${code}`
-                    : `${SET_CODES[set]}-${
-                        Number(code) + (set === 'Energy' ? 163 : 0)
-                      }`,
+                  id: card.id,
                 },
               }
-            : null;
-        })
-        .filter((card) => card),
+            );
+          })
+          .filter((card) => card)
+      ),
     };
   }
 }

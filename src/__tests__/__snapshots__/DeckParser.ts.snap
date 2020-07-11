@@ -1,6 +1,330 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DeckParser Should Work with an exported deck 1`] = `
+exports[`DeckParser Should Work with energy deck 1`] = `
+Object {
+  "cards": Array [
+    Object {
+      "amount": 1,
+      "code": 105,
+      "name": "Grass Energy",
+      "ptcgoio": Object {
+        "id": "bw1-105",
+      },
+      "raw": "* 1 Grass Energy Energy 1",
+      "set": "BLW",
+    },
+    Object {
+      "amount": 1,
+      "code": 128,
+      "name": "Fire Energy",
+      "ptcgoio": Object {
+        "id": "gym1-128",
+      },
+      "raw": "* 1 Fire Energy Energy 2",
+      "set": "G1",
+    },
+    Object {
+      "amount": 1,
+      "code": 102,
+      "name": "Water Energy",
+      "ptcgoio": Object {
+        "id": "base1-102",
+      },
+      "raw": "* 1 Water Energy Energy 3",
+      "set": "BS",
+    },
+    Object {
+      "amount": 1,
+      "code": 130,
+      "name": "Lightning Energy",
+      "ptcgoio": Object {
+        "id": "gym1-130",
+      },
+      "raw": "* 1 Lightning Energy Energy 4",
+      "set": "G1",
+    },
+    Object {
+      "amount": 1,
+      "code": 92,
+      "name": "Psychic Energy",
+      "ptcgoio": Object {
+        "id": "col1-92",
+      },
+      "raw": "* 1 Psychic Energy Energy 5",
+      "set": "CL",
+    },
+    Object {
+      "amount": 1,
+      "code": 96,
+      "name": "Basic Fighting Energy",
+      "ptcgoio": Object {
+        "id": "xy12-96",
+      },
+      "raw": "* 1 Fighting Energy Energy 6",
+      "set": "EVO",
+    },
+    Object {
+      "amount": 1,
+      "code": 168,
+      "name": "Darkness Energy",
+      "ptcgoio": Object {
+        "id": "sm3-168",
+      },
+      "raw": "* 1 Darkness Energy Energy 7",
+      "set": "BUS",
+    },
+    Object {
+      "amount": 1,
+      "code": 98,
+      "name": "Basic Metal Energy",
+      "ptcgoio": Object {
+        "id": "xy12-98",
+      },
+      "raw": "* 1 Metal Energy Energy 8",
+      "set": "EVO",
+    },
+    Object {
+      "amount": 1,
+      "code": 169,
+      "name": "Fairy Energy",
+      "ptcgoio": Object {
+        "id": "sm3-169",
+      },
+      "raw": "* 1 Fairy Energy Energy 9",
+      "set": "BUS",
+    },
+  ],
+}
+`;
+
+exports[`DeckParser Should Work with promo deck 1`] = `
+Object {
+  "cards": Array [
+    Object {
+      "amount": 1,
+      "code": "XY116",
+      "name": "Arceus",
+      "ptcgoio": Object {
+        "id": "xyp-XY116",
+      },
+      "raw": "* 1 Arceus PR-XY 116",
+      "set": "PR-XY",
+    },
+    Object {
+      "amount": 1,
+      "code": "XY62",
+      "name": "Absol-EX",
+      "ptcgoio": Object {
+        "id": "xyp-XY62",
+      },
+      "raw": "* 1 Absol-EX PR-XY 62",
+      "set": "PR-XY",
+    },
+    Object {
+      "amount": 1,
+      "code": "SM43",
+      "name": "Alolan Meowth",
+      "ptcgoio": Object {
+        "id": "smp-SM43",
+      },
+      "raw": "* 1 Alolan Meowth PR-SM 43",
+      "set": "PR-SM",
+    },
+    Object {
+      "amount": 1,
+      "code": "SM51",
+      "name": "Alolan Meowth",
+      "ptcgoio": Object {
+        "id": "smp-SM51",
+      },
+      "raw": "* 1 Alolan Meowth PR-SM 51",
+      "set": "PR-SM",
+    },
+    Object {
+      "amount": 1,
+      "code": "XY63",
+      "name": "M Absol-EX",
+      "ptcgoio": Object {
+        "id": "xyp-XY63",
+      },
+      "raw": "* 1 M Absol-EX PR-XY 63",
+      "set": "PR-XY",
+    },
+    Object {
+      "amount": 1,
+      "code": "SM128",
+      "name": "Alolan Ninetales",
+      "ptcgoio": Object {
+        "id": "smp-SM128",
+      },
+      "raw": "* 1 Alolan Ninetales PR-SM 128",
+      "set": "PR-SM",
+    },
+    Object {
+      "amount": 1,
+      "code": "XY97",
+      "name": "Aerodactyl-EX",
+      "ptcgoio": Object {
+        "id": "xyp-XY97",
+      },
+      "raw": "* 1 Aerodactyl-EX PR-XY 97",
+      "set": "PR-XY",
+    },
+    Object {
+      "amount": 1,
+      "code": "XY98",
+      "name": "M Aerodactyl-EX",
+      "ptcgoio": Object {
+        "id": "xyp-XY98",
+      },
+      "raw": "* 1 M Aerodactyl-EX PR-XY 98",
+      "set": "PR-XY",
+    },
+    Object {
+      "amount": 1,
+      "code": 65,
+      "name": "Aegislash-EX",
+      "ptcgoio": Object {
+        "id": "xy4-65",
+      },
+      "raw": "* 1 Aegislash-EX PHF 65",
+      "set": "PHF",
+    },
+    Object {
+      "amount": 1,
+      "code": "SM127",
+      "name": "Alolan Sandslash",
+      "ptcgoio": Object {
+        "id": "smp-SM127",
+      },
+      "raw": "* 1 Alolan Sandslash PR-SM 127",
+      "set": "PR-SM",
+    },
+    Object {
+      "amount": 1,
+      "code": 19,
+      "name": "Alolan Sandshrew",
+      "ptcgoio": Object {
+        "id": "sm2-19",
+      },
+      "raw": "* 1 Alolan Sandshrew GRI 19",
+      "set": "GRI",
+    },
+    Object {
+      "amount": 1,
+      "code": "SM18",
+      "name": "Alolan Sandslash",
+      "ptcgoio": Object {
+        "id": "smp-SM18",
+      },
+      "raw": "* 1 Alolan Sandslash PR-SM 18",
+      "set": "PR-SM",
+    },
+    Object {
+      "amount": 1,
+      "code": 131,
+      "name": "Rainbow Energy",
+      "ptcgoio": Object {
+        "id": "xy1-131",
+      },
+      "raw": "* 1 Rainbow Energy XY 131",
+      "set": "XY",
+    },
+    Object {
+      "amount": 1,
+      "code": 107,
+      "name": "Water Energy",
+      "ptcgoio": Object {
+        "id": "bw1-107",
+      },
+      "raw": "* 1 Water Energy BLW 107",
+      "set": "BLW",
+    },
+    Object {
+      "amount": 1,
+      "code": 112,
+      "name": "Metal Energy",
+      "ptcgoio": Object {
+        "id": "bw1-112",
+      },
+      "raw": "* 1 Metal Energy BLW 112",
+      "set": "BLW",
+    },
+    Object {
+      "amount": 1,
+      "code": 109,
+      "name": "Psychic Energy",
+      "ptcgoio": Object {
+        "id": "bw1-109",
+      },
+      "raw": "* 1 Psychic Energy BLW 109",
+      "set": "BLW",
+    },
+    Object {
+      "amount": 1,
+      "code": 110,
+      "name": "Fighting Energy",
+      "ptcgoio": Object {
+        "id": "bw1-110",
+      },
+      "raw": "* 1 Fighting Energy BLW 110",
+      "set": "BLW",
+    },
+    Object {
+      "amount": 1,
+      "code": 169,
+      "name": "Fairy Energy",
+      "ptcgoio": Object {
+        "id": "sm3-169",
+      },
+      "raw": "* 1 Fairy Energy XYEnergy 2",
+      "set": "BUS",
+    },
+    Object {
+      "amount": 1,
+      "code": 105,
+      "name": "Grass Energy",
+      "ptcgoio": Object {
+        "id": "bw1-105",
+      },
+      "raw": "* 1 Grass Energy BLW 105",
+      "set": "BLW",
+    },
+    Object {
+      "amount": 1,
+      "code": 108,
+      "name": "Lightning Energy",
+      "ptcgoio": Object {
+        "id": "bw1-108",
+      },
+      "raw": "* 1 Lightning Energy BLW 108",
+      "set": "BLW",
+    },
+    Object {
+      "amount": 1,
+      "code": 168,
+      "name": "Darkness Energy",
+      "ptcgoio": Object {
+        "id": "sm3-168",
+      },
+      "raw": "* 1 Darkness Energy XYEnergy 1",
+      "set": "BUS",
+    },
+    Object {
+      "amount": 1,
+      "code": 106,
+      "name": "Fire Energy",
+      "ptcgoio": Object {
+        "id": "bw1-106",
+      },
+      "raw": "* 1 Fire Energy BLW 106",
+      "set": "BLW",
+    },
+  ],
+}
+`;
+
+exports[`DeckParser Should Work with test deck 1`] = `
 Object {
   "cards": Array [
     Object {
@@ -255,33 +579,33 @@ Object {
     },
     Object {
       "amount": 10,
-      "code": 7,
+      "code": 168,
       "name": "Darkness Energy",
       "ptcgoio": Object {
-        "id": "sm1-170",
+        "id": "sm3-168",
       },
       "raw": "* 10 Darkness Energy Energy 7",
-      "set": "Energy",
+      "set": "BUS",
     },
     Object {
       "amount": 1,
-      "code": 3,
+      "code": 102,
       "name": "Water Energy",
       "ptcgoio": Object {
-        "id": "sm1-166",
+        "id": "base1-102",
       },
       "raw": "* 1 Water Energy Energy 3",
-      "set": "Energy",
+      "set": "BS",
     },
     Object {
       "amount": 18,
-      "code": 8,
+      "code": 92,
       "name": "Psychic Energy",
       "ptcgoio": Object {
-        "id": "undefined-8",
+        "id": "col1-92",
       },
       "raw": "* 18 Psychic Energy XYEnergy 8",
-      "set": "XYEnergy",
+      "set": "CL",
     },
   ],
 }

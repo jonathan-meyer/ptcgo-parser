@@ -1,5 +1,5 @@
 module.exports = {
   verbose: true,
-  preset: "ts-jest/presets/js-with-ts",
   collectCoverage: false,
+  testPathIgnorePatterns: ['/node_modules/', '/dist/', 'coverage'],
 };

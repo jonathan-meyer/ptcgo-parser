@@ -16,6 +16,7 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowJs": true,
-    "checkJs": true
+    "checkJs": true,
+    "experimentalDecorators": true
   }
 }
